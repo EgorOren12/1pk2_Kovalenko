@@ -14,7 +14,7 @@
             Console.WriteLine("Введите свой день рождения");
             int daybirt = int.Parse(Console.ReadLine());
 
-            int curyear = 2025; int curmonth = 1; int curday = 17;
+            int curyear = int.Parse(Console.ReadLine()); int curmonth = int.Parse(Console.ReadLine()); int curday = int.Parse(Console.ReadLine());
             int Age = curyear - yearbirt;
             if ((curmonth < monthbirt & Age == 18) || (curmonth == monthbirt & curday < daybirt))
                 Age -= 1;
