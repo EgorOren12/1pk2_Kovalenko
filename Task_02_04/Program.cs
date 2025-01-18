@@ -23,6 +23,7 @@
                 Console.WriteLine("Вы совершеннолетний");
             else
                 Console.WriteLine("Вы несовершеннолетний");
+
         }
     }
 }
