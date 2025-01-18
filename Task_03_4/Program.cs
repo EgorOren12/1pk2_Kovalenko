@@ -11,7 +11,7 @@
         {
         string a = Console.ReadLine();
             string b = "";
-            while (a != "exit" | a != "" )
+            while (true)
                 
             { 
                 b += a + "\n";
