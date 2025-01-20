@@ -9,19 +9,20 @@
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Для прекращения ввода пропищите exit или пустую строку");
         string a = Console.ReadLine();
-            string b = "";
+            int b = 0;
             while (true)
                 
             { 
-                b += a + "\n";
+                ++b;
                 Console.Clear();
             a = Console.ReadLine();
                 if (a == "exit" | a == "")
                     break;
             }
             Console.Clear();
-            Console.WriteLine(b);
+            Console.WriteLine("Было введено " + b + " строк");
         }
     }
 }
