@@ -24,5 +24,6 @@
             Console.Clear();
             Console.WriteLine("Было введено " + b + " строк");
         }
+
     }
 }
