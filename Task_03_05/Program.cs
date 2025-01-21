@@ -10,11 +10,12 @@
         {
             Console.WriteLine("Введите диапазон изменения температуры в градусах Цельсия и шаг изменения температуры.(числами)\n");
             double a1, a2, shag;
-            Console.WriteLine("Введите диапазон");
+            Console.WriteLine("Введите начало диапазона");
             while (!double.TryParse(Console.ReadLine(), out a1))
             {
                 Console.WriteLine("Ошибка ввода, попробуйте еще раз");
             }
+            Console.WriteLine("Введите конец диапазона");
             while (!double.TryParse(Console.ReadLine(), out a2))
             {
                 Console.WriteLine("Ошибка ввода, попробуйте еще раз");
