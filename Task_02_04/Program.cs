@@ -44,7 +44,6 @@
             int Age = curyear - yearbirt;
                 if ((curmonth < monthbirt & Age == 18) || (curmonth == monthbirt & curday < daybirt))
                     Age -= 1;
-                Console.WriteLine(Age);
                 if (Age >= 18)
                     Console.WriteLine("Вы совершеннолетний");
                 else
