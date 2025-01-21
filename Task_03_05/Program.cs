@@ -7,16 +7,26 @@
         время работы программы*/
         static void Main(string[] args)
         {
-            Console.WriteLine("Диапазон изменения температуры в градусах Цельсия и шаг изменения температуры. ");
-            int a1 = int.Parse(Console.ReadLine());  int a2 = int.Parse(Console.ReadLine()); int shag = int.Parse(Console.ReadLine());
-            for (int i = 0; a1 + shag < a2; i += shag)
+            Console.WriteLine("Введите диапазон изменения температуры в градусах Цельсия и шаг изменения температуры.(числами)\n");
+            double a1, a2, shag;
+            Console.WriteLine("Введите диапазон");
+            while (!double.TryParse(Console.ReadLine(), out a1))
             {
-                Console.WriteLine((a1 + i) * 1.8 + 32);
-                if (a1 + i >= a2) 
-                {
-                    break;
-
-                }
+                Console.WriteLine("Ошибка ввода, попробуйте еще раз");
+            }
+            while (!double.TryParse(Console.ReadLine(), out a2))
+            {
+                Console.WriteLine("Ошибка ввода, попробуйте еще раз");
+            }
+            Console.WriteLine("Введите шаг");
+            while (!double.TryParse(Console.ReadLine(), out shag))
+            {
+                Console.WriteLine("Ошибка ввода, попробуйте еще раз");
+            }
+            Console.Clear();
+            for (double i = a1; a1 + shag <= a2 + shag; a1 += shag)
+            {
+                Console.WriteLine(a1 + " С' = " + (a1*1.8 + 32) + " F'");
             }
         }
     }
