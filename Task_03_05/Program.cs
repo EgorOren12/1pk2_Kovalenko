@@ -28,7 +28,7 @@
             Console.Clear();
             for (double i = a1; a1 + shag <= a2 + shag; a1 += shag)
             {
-                Console.WriteLine(a1 + " С' = " + (a1*1.8 + 32) + " F'");
+                Console.WriteLine(a1 + " С' = " + (a1 * 1.8 + 32) + " F'");
             }
         }
     }
