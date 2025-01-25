@@ -13,11 +13,11 @@
                 Console.WriteLine("Ошибка ввода");
             }
             Console.Clear();
-            Console.WriteLine("v       t");
-            Console.WriteLine("______________");
+            Console.WriteLine("t            v");
+            Console.WriteLine("_____________________");
             for (double i = 0.5; i <= t; i += 0.5)
             {
-                Console.WriteLine(i + "       " + (g * i));
+                Console.WriteLine($"{i}         {i *g}");
             }
         }
     }
