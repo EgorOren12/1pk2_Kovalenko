@@ -17,7 +17,7 @@ namespace Task_04_05
             string dnibez = "";
             for (int i = 1; i < 31; ++i) // предподсчет суммы задание нового массива
             {
-                dni[i] = rnd.Next(0, 3);
+                dni[i] = rnd.Next(0, 300);
                 pref[i + 1] = dni[i] + pref[i];
 
             }
