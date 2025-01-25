@@ -14,7 +14,9 @@
             int b = 0;
             while (true)
                 
-            { 
+            {
+                if (a == "exit" | a == "")
+                    break;
                 ++b;
                 Console.Clear();
             a = Console.ReadLine();
