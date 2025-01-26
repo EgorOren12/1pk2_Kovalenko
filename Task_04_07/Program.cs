@@ -23,7 +23,6 @@
                     classf[i] = -rnd.Next(150, 200);
                     ++m; srm += classf[i];
                 }
-                Console.WriteLine($"{i}      {classf[i]}");
 
             }
             Console.WriteLine($"Количество мальчиков - {m}\nКоличество девочек - {d}\n" +
