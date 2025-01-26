@@ -25,7 +25,7 @@ namespace Task_05_04
                 {
                     cube[i, j] = rnd.Next(0, 2); //если поменять 2 на 1 то выводит диагональ 100% :)
                 }
-            }//задание
+            }
             for (int i = 0; i < cube.GetLength(0); i++) 
             {
             for(int j = 0;j < cube.GetLength(1); j++) 
