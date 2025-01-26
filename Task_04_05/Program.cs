@@ -23,10 +23,10 @@ namespace Task_04_05
             }
             sym1 = pref[11] - pref[1];
             sym2 = pref[21] - pref[11];
-            sym3 = pref[31] - pref[21];      // 11
+            sym3 = pref[31] - pref[21];
             for (int i = 1; i < 31; ++i)
             {
-                if (Math.Max(maxi, dni[i]) == dni[i])
+                if (Math.Max(maxi, dni[i]) == dni[i])// подсчет других условий
                 {
                     maxi = dni[i];
                     maxday = i;
