@@ -12,7 +12,6 @@
             for (int i = 0; i < el.Length; i++)
             {
                 el[i] = rnd.Next(1, 11);
-                Console.WriteLine($"{i}     {el[i]}");
             }
             for (int i = 0; i < el.Length; i++)
             {
