@@ -34,8 +34,9 @@
                     }
                 } while (!uni);
                 numbers[i] = vmassiv;
-                Console.WriteLine($"{i}    |     {numbers[i]}");
+                Console.Write(numbers[i]+" ");
             }
+            Console.WriteLine();
             for (int i = 0;i < a; ++i) //макс по модулю
             {
                 if (Math.Abs(maxi) < Math.Abs(numbers[i])) 
