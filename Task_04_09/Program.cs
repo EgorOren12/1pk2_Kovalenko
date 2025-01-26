@@ -17,8 +17,9 @@
             for (int i = 0; i < ints.Length; i++) 
             {
                 ints[i] = rnd.Next(1,10);
-                Console.WriteLine(ints[i]);
+                Console.Write(ints[i]+" ");
             }
+            Console.WriteLine();
             Console.WriteLine("_________________________________\nУникальные элементы массива:");
             for (int i = 0; i < ints.Length; i++) 
             {
