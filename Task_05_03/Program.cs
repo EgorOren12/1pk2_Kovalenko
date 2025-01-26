@@ -24,11 +24,11 @@ namespace Task_05_03
             for (int i = 0; i < alfavit.GetLength(0); i++)
                 for (int j = 0; j < alfavit.GetLength(1); j++) 
                 {
-                    alfavit[i, j] = (char)('a' + rnd.Next(0, 0));
-                    alfavit2[i, j] = (char)('a' + (rnd.Next(0, 0)));
+                    alfavit[i, j] = (char)('a' + rnd.Next(0, 26));
+                    alfavit2[i, j] = (char)('a' + (rnd.Next(0, 26)));
                 }
             
-            for(int i = 0; i < alfavit.GetLength(0); i++) 
+            for(int i = 0; i < alfavit.GetLength(0); i++)   //вывод обычного массива
             {
                 for(int j = 0;j < alfavit.GetLength(1); j++) 
                 {
@@ -42,7 +42,7 @@ namespace Task_05_03
                 Console.WriteLine();
             }
             Console.WriteLine("--------------");
-            for (int i = 0; i < alfavit.GetLength(0); i++) 
+            for (int i = 0; i < alfavit.GetLength(0); i++) //проверка на равенство массивов
             {
             for (int j = 0;j< alfavit.GetLength(1); j++)    
                 {
@@ -52,7 +52,7 @@ namespace Task_05_03
                     }
                 }
             }
-            if (pocaz == true)
+            if (pocaz == true)         //вывод данных
             {
                 Console.WriteLine("Матрицы равны");
             }
@@ -84,12 +84,6 @@ namespace Task_05_03
                     Console.WriteLine();
                 }
             }
-
-            
-
-           
-            
-
         }
     }
 }
