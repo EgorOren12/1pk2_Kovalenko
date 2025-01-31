@@ -17,21 +17,20 @@ namespace Task_05_07
             {
                 Console.WriteLine("Ошибка ввода");
             }
+            Console.Clear();
             int[,] cube = new int[n, n];
             int[] numbers = new int[5];
             Random rnd = new Random();
 
-            for (int i = 0; i < cube.GetLength(0); i++) 
+            for (int i = 0; i < cube.GetLength(0); i++) //задание начального массива
             {
             for (int j = 0; j < cube.GetLength(1); j++) 
                 {
                     cube[i, j] = rnd.Next(10, 100);
-                    Console.Write(cube[i,j]+" ");
                 }
-                Console.WriteLine();
             }
-            Console.WriteLine("---------------");
-            mini = cube[0, 0];
+
+            mini = cube[0, 0];//нахождение мин
             for (int i = 0; i < cube.GetLength(0); i++)
             {
                 for (int j = 0; j < cube.GetLength(1); j++)
@@ -42,19 +41,15 @@ namespace Task_05_07
                     }
                 }
             }
-            for (int i = 0;i < cube.GetLength(0); i++)
+            for (int i = 0;i < cube.GetLength(0); i++) // умножение массива на мин
                 {
                 for (int j = 0; j < cube.GetLength(1); j++)
                 {
                     cube[i, j] = cube[i, j] * mini;
-                    Console.Write(cube[i,j]+" ");
+                }   
                 }
-                Console.WriteLine();
-                    
-                }
-            Console.WriteLine("--------------------------");
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++) //нахождение 5 макс чисел
             {
                 for(int j = 0;j < n; j++)
                 {
@@ -73,13 +68,30 @@ namespace Task_05_07
                     }
                 }
             }
-            for(int i = 0;i<
-
-
-            
-
-            Console.WriteLine();
-            Console.WriteLine($"Минимальный элемент массива - {mini}, ");
+            Console.WriteLine("Вывод массива с выделеными цветами"); //вывод массива
+            for(int i = 0;i< cube.GetLength(0); i++)
+            {
+                for(int j = 0; j< cube.GetLength(1); j++)
+                {
+                    bool b = false;
+                    for (int k =0; k< numbers.Length; k++)
+                    {
+                        if (cube[i, j] == numbers[k])
+                        {
+                            b = true;
+                            break;
+                        }
+                    }
+                    if (b)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                    }
+                    Console.Write(cube[i,j]);
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
