@@ -24,7 +24,6 @@
             Console.WriteLine("Изначальный массив:");
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] += 1;
                 Console.Write(numbers[i] + " ");
             }
             Console.WriteLine("\nМассив внутри метода:");
