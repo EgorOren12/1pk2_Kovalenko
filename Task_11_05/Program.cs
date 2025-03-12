@@ -1,39 +1,33 @@
-﻿using System.Security.Cryptography;
+﻿using System;
 
-namespace Task_11_04
+class Program
 {
-    internal class Program
+    //Комбинирование ref и out: Напишите метод, который принимает два числа по ссылке (ref) и
+    //возвращает их сумму и произведение через выходные параметры(out).
+
+    static void Main()
     {
-        /*Массив параметров (params): Напишите метод, который принимает массив чисел и возвращает
-их среднее значение. Используйте ключевое слово params*/
-        static void Main(string[] args)
-        {
-            int n;
-            Console.WriteLine("Введите размер массива:");
-            while (!int.TryParse(Console.ReadLine(), out n))
-                Console.WriteLine("Ошибка ввода");
-            int[] numbers = new int[n];
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.WriteLine($"Введите число {i + 1}:");
-                numbers[i] = int.Parse(Console.ReadLine());
-            }
-            Console.WriteLine(Value(numbers));
-        }
-        /// <summary>
-        /// нахождение среднего значения по массиву чисел
-        /// </summary>
-        /// <param name="array">массив чисел</param>
-        /// <returns>среднее значение</returns>
-        static double Value(params int[] array)
-        {
-            double summ = 0;
-            for (int i = 0; i < array.Length; i++)
-            {
-                summ += array[i];
-            }
-            return summ / array.Length;
-        }
+        double a, b, summ, proizv;
+        Console.WriteLine("Введите число 1:");
+        while (!double.TryParse(Console.ReadLine(), out a))
+            Console.WriteLine("Ошибка ввода");
+        Console.WriteLine("Введите число 2:");
+        while (!double.TryParse(Console.ReadLine(), out b))
+            Console.WriteLine("Ошибка ввода");
+        Summ(ref a, ref b, out summ, out proizv);
+        Console.WriteLine($"Сумма чисел: {summ}\nПроизведение чисел: {proizv}");
+    }
+    /// <summary>
+    /// вычисление суммы и произведения чисел
+    /// </summary>
+    /// <param name="a">число 1</param>
+    /// <param name="b">число 2</param>
+    /// <param name="summ">сумма</param>
+    /// <param name="proizv">произведение</param>
+    static void Summ(ref double a, ref double b, out double summ, out double proizv)
+    {
+        summ = a + b;
+        proizv = a * b;
     }
 }
 
