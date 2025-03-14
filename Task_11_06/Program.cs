@@ -16,7 +16,7 @@
             Console.Clear();
             for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine($"Введите число {i+1}:");
+                Console.WriteLine($"Введите число {i + 1}:");
                 numbers[i] = int.Parse(Console.ReadLine());
                 Console.Clear();
             }
@@ -38,7 +38,7 @@
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] += 1;
-                Console.Write(array[i]+" ");
+                Console.Write(array[i] + " ");
             }
         }
     }
