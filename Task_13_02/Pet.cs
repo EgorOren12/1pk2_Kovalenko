@@ -151,7 +151,7 @@ namespace Task_13_02
         /// <summary>
         /// конструктор создает объект животного с именем и видом
         /// остальные св-ва остаются незаполненными
-        /// </summary>
+        /// </summary> 
         /// <param name="name">имя</param>
         /// <param name="kind">вид</param>
         public Pet(string name, string kind)
