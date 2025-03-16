@@ -104,6 +104,14 @@ namespace Task_13_02
 
         #endregion
         #region конструкторы
+        /// <summary>
+        /// конструктор создает объект животного со всеми св-вами
+        /// </summary>
+        /// <param name="name">кличка</param>
+        /// <param name="kind">вид</param>
+        /// <param name="age">возраст</param>
+        /// <param name="weight">вес</param>
+        /// <param name="health">отметка о здоровье</param>
         public Pet(string name, string kind, string age, string weight, string health)
         {
             this.name = name;
@@ -112,6 +120,13 @@ namespace Task_13_02
             this.weight = weight;
             this.health = health;
         }
+        /// <summary>
+        /// конструктор создает объект животного со всеми св-вами, кроме отметки о здоровье
+        /// </summary>
+        /// <param name="name">имя</param>
+        /// <param name="kind">вид</param>
+        /// <param name="age">возраст</param>
+        /// <param name="weight">вес</param>
         public Pet(string name, string kind, string age, string weight)
         {
             this.name=name;
@@ -119,21 +134,42 @@ namespace Task_13_02
             this.age = age;
             this.weight = weight;
         }
+        /// <summary>
+        /// конструктор создает объект животного с именем, видом и возрастом
+        /// остальные св-ва остаются незаполненными
+        /// </summary>
+        /// <param name="name">имя</param>
+        /// <param name="kind">вид</param>
+        /// <param name="age">возраст</param>
         public Pet(string name, string kind, string age)
         {
             this.name = name;
             this.kind = kind;
             this.age = age;
         }
+        /// <summary>
+        /// конструктор создает объект животного с именем и видом
+        /// остальные св-ва остаются незаполненными
+        /// </summary>
+        /// <param name="name">имя</param>
+        /// <param name="kind">вид</param>
         public Pet(string name,string kind)
         {
             this.name = name;
             this.kind = kind;
         }
+        /// <summary>
+        /// конструктор создает объект животного только с именем
+        /// остальные св-ва остаются незаполненными
+        /// </summary>
+        /// <param name="name">имя</param>
         public Pet(string name)
         {
             this.name = name;
         }
+        /// <summary>
+        /// конструтор по умолчанию
+        /// </summary>
         public Pet() { }
         #endregion
     }
