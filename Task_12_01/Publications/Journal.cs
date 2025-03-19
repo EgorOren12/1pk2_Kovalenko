@@ -14,6 +14,9 @@ namespace Task_12_01.Publications
         public int pages;
         public string price;
         bool buy = false;
+        /// <summary>
+        /// покупка журнала
+        /// </summary>
         public void BuyJournal()
         {
             if (buy)
@@ -24,6 +27,9 @@ namespace Task_12_01.Publications
                 buy = true;
             }
         }
+        /// <summary>
+        /// информация о журнале
+        /// </summary>
         public void JournalInfo()
         {
             Console.WriteLine($"Название журнала - {name}\nПредметно-тематическая направленность - {theme}" +

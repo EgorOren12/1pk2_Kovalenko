@@ -14,6 +14,9 @@ namespace Task_12_01.Publications
         public string pages;
         public string date;
         bool notinrange = false;
+        /// <summary>
+        /// покупка газеты
+        /// </summary>
         public void BuyNewspaper()
         {
             if (notinrange)
@@ -25,6 +28,9 @@ namespace Task_12_01.Publications
             }
 
         }
+       /// <summary>
+       /// информацио о газете
+       /// </summary>
         public void GetInfoNewsPaper()
         {
             Console.WriteLine($"Название газеты - {name}\nЗаголовок главной полосы - {mainline}" +

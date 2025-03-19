@@ -12,6 +12,10 @@ namespace Task_14_04
         {
             get; set;
         }
+        /// <summary>
+        /// запись текущего пользователя
+        /// </summary>
+        /// <param name="a">имя текущего пользователя</param>
         public static void SetCurrentUser(string a)
         {
             CurrentUser = a;
