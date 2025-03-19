@@ -9,7 +9,7 @@ namespace Task_12_01.Publications
     class Newspaper
     {
         public string name;
-        public string price;
+        public string price; 
         public string mainline;
         public string pages;
         public string date;
