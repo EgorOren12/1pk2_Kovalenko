@@ -17,16 +17,21 @@ namespace Task_14_03
             if (n < 0)
                 Console.WriteLine("Факториал числа определен только для положительных чисел");
             else
-            Console.WriteLine($"Факториал числа {n} = {Factorial(n)}");
-            static long Factorial(long a)
+            Console.WriteLine($"Факториал числа {n} = {Factorial(n)}");           
+        }
+        /// <summary>
+        /// вычисление факториала числа
+        /// </summary>
+        /// <param name="a">число для которого считается факториал</param>
+        /// <returns>факториал числа</returns>
+        static long Factorial(long a)
+        {
+            long factorial = 1;
+            for (int i = 1; i <= a; i++)
             {
-               long factorial = 1;
-               for (int i = 1; i <= a; i++)
-               {
-                        factorial *= i;
-               }         
-               return factorial;
+                factorial *= i;
             }
+            return factorial;
         }
     }
 }
