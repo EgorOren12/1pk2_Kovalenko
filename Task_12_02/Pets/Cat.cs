@@ -13,10 +13,16 @@ namespace Task_12_02.Pets
         public string kind;
         bool iseat = false;
         bool fight = false;
+        /// <summary>
+        /// информация о коте
+        /// </summary>
         public void CatGetInfo()
         {
             Console.WriteLine($"Кот {name}, возраст - {age}, порода - {kind}");
         }
+        /// <summary>
+        /// кормление кота
+        /// </summary>
         public void Eat()
         {
             if (iseat == false)
@@ -30,6 +36,9 @@ namespace Task_12_02.Pets
                 
             }
         }
+        /// <summary>
+        /// драка кота и собаки
+        /// </summary>
 
         public void Fight()
         {

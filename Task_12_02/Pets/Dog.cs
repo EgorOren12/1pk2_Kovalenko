@@ -14,11 +14,16 @@ namespace Task_12_02.Pets
         bool wantotplay = true;
         bool gotowalk = true;
         bool iseat = false;
+        /// <summary>
+        /// информацио о собаке
+        /// </summary>
         public void DogGetInfo()
         {
             Console.WriteLine($"Собака {name}, возраст - {age}, порода - {kind}");
         }
-
+        /// <summary>
+        /// кормление собаки
+        /// </summary>
         public void Eat()
         {
             if (iseat == false)
@@ -30,6 +35,9 @@ namespace Task_12_02.Pets
             else
                 Console.WriteLine("Собака была покормлена недавно");
         }
+       /// <summary>
+       /// прогулка с собакой
+       /// </summary>
         public void Walk()
         {
             if (gotowalk)
@@ -40,6 +48,9 @@ namespace Task_12_02.Pets
             else
                 Console.WriteLine("Вы гуляли с собакой недавно");
         }
+        /// <summary>
+        /// игра с собакой
+        /// </summary>
         public void Play()
         {
             if (wantotplay)
