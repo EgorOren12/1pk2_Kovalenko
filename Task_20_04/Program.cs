@@ -13,7 +13,14 @@
     {
         static void Main(string[] args)
         {
-        
+            int kindOfVehicle;
+            Console.WriteLine("Количество каких т/с вы хотите подсчитать:\n1-Машины\n2-Велосипеды\n3-Автобусы\n4-Грузовики\n5-Мотоциклы");
+            while(!int.TryParse(Console.ReadLine(),out kindOfVehicle))
+            {
+                Console.WriteLine("Ошибка ввода");
+            }
+            Console.Clear();
+            Vehicle.GetCountOfVehicleType(kindOfVehicle - 1);
         }
     }
 }

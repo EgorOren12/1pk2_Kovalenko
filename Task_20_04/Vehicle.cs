@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,37 @@ namespace Task_20_04
     /*    Храните список транспортных средств (можно просто List<VehicleType>). 
     Добавьте метод для подсчёта транспорта определённого типа (например, сколько грузовиков). 
     Реализуйте поиск по типу и вывод информации*/
-    internal class Vehicle
+    internal static class Vehicle
     {
-        public List<VehicleType> vehicleTypes { get; set; }
-        public Vehicle()
+        //private List<VehicleType> vehicles = new List<VehicleType>
+        //{
+        //   VehicleType.Car,
+        //   VehicleType.Bike,
+        //   VehicleType.Bus,
+        //   VehicleType.Truck,
+        //   VehicleType.Motorcycle,
+        //   VehicleType.Car,
+        //   VehicleType.Bike
+        //};
+        static public List<VehicleType> Vehicles { get; set; } = new List<VehicleType>() {         
+           VehicleType.Car,
+           VehicleType.Bike,
+           VehicleType.Bus,
+           VehicleType.Truck,
+           VehicleType.Motorcycle,
+           VehicleType.Car,
+           VehicleType.Bike
+        };
+
+        static public void GetCountOfVehicleType(int vehicleIndex)
         {
-            vehicleTypes = new List<VehicleType>();
+            int count = 0;
+            foreach (var vehicle in Vehicles)
+            {
+                if (vehicle == (VehicleType)vehicleIndex)
+                    count++;
+            }
+            Console.WriteLine($"Транспортных средств типа {(VehicleType)vehicleIndex} - {count}");
         }
 
     }
