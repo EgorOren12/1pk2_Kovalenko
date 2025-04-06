@@ -63,7 +63,7 @@ namespace Task_23_06
 
             DirectoryInfo directoryInfoCurDir = new DirectoryInfo(currentDir);
 
-            if (Directory.Exists(currentDir + $@"\{subCurDir}"))
+            if (Directory.Exists(Path.Combine(currentDir, subCurDir)))
             {
                 Console.WriteLine($"Вложенный каталог {subCurDir} уже существует\n");
             }
