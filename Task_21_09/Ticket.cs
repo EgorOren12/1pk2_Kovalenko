@@ -13,6 +13,9 @@ namespace Task_21_09
         public bool Baggaje { get; set; }
         public bool Benefits { get; set; }
 
+        /// <summary>
+        /// конструктор билета со всеми значениями
+        /// </summary>
         public Ticket() 
         {
         Random rnd = new Random();
@@ -29,6 +32,9 @@ namespace Task_21_09
             else
                 Benefits = false;
         }
+        /// <summary>
+        /// выводит информацию о билете
+        /// </summary>
         public void TicketGetInfo()
         {
             Console.WriteLine($"Билет на сумму - {Summ}, Багаж? - {Baggaje}, Льготный? - {Benefits}");
