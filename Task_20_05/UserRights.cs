@@ -8,6 +8,11 @@ namespace Task_20_05
 {
     internal class UserRights
     {
+        /// <summary>
+        /// верификация уровня доступа
+        /// </summary>
+        /// <param name="level">текущий уровень доступа</param>
+        /// <param name="n">действие пользователя(чтение и тд)</param>
         public static void VerifyingUserRights(AccessLevel level, int n)
         {
             switch (n)
