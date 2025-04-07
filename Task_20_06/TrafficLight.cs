@@ -13,6 +13,10 @@ namespace Task_20_06
         public TrafficLightColor Color { get; set; } = TrafficLightColor.Red;
         private bool autoTraficLight = true;
 
+        /// <summary>
+        /// изменение цветов светофора
+        /// переключение на авто/ручной режимы
+        /// </summary>
         public void SwitchColour()
         {
             Console.WriteLine("Нажмите q для выхода;\nEnter для перехода в ручной режим переключения;\n");
@@ -42,7 +46,9 @@ namespace Task_20_06
                 Thread.Sleep(3000);
             }
         }
-
+        /// <summary>
+        /// автоизменение цветов светофора
+        /// </summary>
         public void AutoSwitchColour()
         {
             switch (Color)
