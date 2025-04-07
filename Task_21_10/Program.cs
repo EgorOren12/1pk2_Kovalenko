@@ -44,6 +44,12 @@
                 Console.WriteLine($"{key.Key} - {key.Value}");
             }
         }
+        /// <summary>
+        /// объединение 2ух словарей
+        /// </summary>
+        /// <param name="d1">1 словарь</param>
+        /// <param name="d2">2 словарь</param>
+        /// <returns>новый объединенный словарь</returns>
         public static Dictionary<string,int> GetAllDictionaries(Dictionary<string,int> d1, Dictionary<string, int> d2)
         {
             Dictionary<string,int> allDictionary = new Dictionary<string,int>();
