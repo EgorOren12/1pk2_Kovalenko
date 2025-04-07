@@ -18,6 +18,12 @@
             Console.WriteLine(FoundKey(dictionaty,value));
         }
 
+        /// <summary>
+        /// нахождение ключа по значению
+        /// </summary>
+        /// <param name="dictionary">словарь</param>
+        /// <param name="currentValue">текущее значение для нахождения ключа</param>
+        /// <returns></returns>
         static string FoundKey(Dictionary<string, string> dictionary, string currentValue)
         {
             foreach (var value in dictionary)
