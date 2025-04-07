@@ -12,6 +12,10 @@ namespace Task_20_03
     class Order
     {
         public OrderStatus Status { get; set; }
+        /// <summary>
+        /// изменяет статус заказа
+        /// </summary>
+        /// <param name="newstatus">новый статус</param>
         public void ChangeStatus(OrderStatus newstatus)
         {       
             if (Status == OrderStatus.Delivered)
