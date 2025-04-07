@@ -12,16 +12,6 @@ namespace Task_20_04
     Реализуйте поиск по типу и вывод информации*/
     internal static class Vehicle
     {
-        //private List<VehicleType> vehicles = new List<VehicleType>
-        //{
-        //   VehicleType.Car,
-        //   VehicleType.Bike,
-        //   VehicleType.Bus,
-        //   VehicleType.Truck,
-        //   VehicleType.Motorcycle,
-        //   VehicleType.Car,
-        //   VehicleType.Bike
-        //};
         static public List<VehicleType> Vehicles { get; set; } = new List<VehicleType>() {         
            VehicleType.Car,
            VehicleType.Bike,
@@ -31,6 +21,10 @@ namespace Task_20_04
            VehicleType.Car,
            VehicleType.Bike
         };
+        /// <summary>
+        /// подсчитывает количество определенного транспорта
+        /// </summary>
+        /// <param name="vehicleIndex">тип транспорта</param>
 
         static public void GetCountOfVehicleType(int vehicleIndex)
         {
