@@ -18,6 +18,11 @@
                 Console.Write(num+" ");
 
         }
+        /// <summary>
+        /// удаление повторяющихся чисел в списке
+        /// </summary>
+        /// <param name="numbers">начальный список чисел</param>
+        /// <returns>новый список чисел</returns>
         static List<int> RemoveNumbers(List<int> numbers)
         {
             List<int> resultnumbers = new List<int>();
