@@ -12,6 +12,11 @@
             Console.WriteLine("Уникальные строки - "+(string.Join(", ",uniqueStrings)));
         }
 
+        /// <summary>
+        /// находит уникальные строки и возвращаетсписок с  ними
+        /// </summary>
+        /// <param name="strings">массив строк</param>
+        /// <returns>список уникальных строк</returns>
         public static string[] UniqueStrings(params string[] strings)
         {
            SortedSet<string> strings1 = new SortedSet<string>();
