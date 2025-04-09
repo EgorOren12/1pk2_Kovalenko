@@ -1,4 +1,6 @@
-﻿namespace Task_24_08
+﻿using System.IO;
+
+namespace Task_24_08
 {
     internal class Program
     {
@@ -16,11 +18,35 @@
             File.Create(path).Dispose();
             File.WriteAllText(path, text);
 
-            Console.WriteLine("Введите текст который вы хотите заменить:");
-            string foundText = Console.ReadLine();
-            Console.WriteLine("Введите текст на который вы хотите заменить:");
-            string replaceText = Console.ReadLine();
-
+            FileInfo fileInfo = new FileInfo(path);
+            if (!File.Exists(path))
+            {
+                Console.WriteLine($"Папки {fileInfo.Name} не существует по указанному пути");
+            }
+            else
+            {
+                Console.WriteLine("Введите текст который вы хотите заменить:");
+                string foundText = Console.ReadLine();
+                Console.WriteLine("Введите текст на который вы хотите заменить:");
+                string replaceText = Console.ReadLine();
+                ReplaceText(path, foundText, replaceText);
+            }
+        }
+        /// <summary>
+        /// заменяет текст на заданное пользователем значение текста
+        /// </summary>
+        /// <param name="path">название файла</param>
+        /// <param name="findText">текст на замену</param>
+        /// <param name="replaceText">заданное пользователем значение текста</param>
+        public static void ReplaceText(string path, string findText, string replaceText)
+        {
+            string text;
+            using (StreamReader reader = new StreamReader(path))
+            {
+            text = reader.ReadToEnd();
+            }
+            string newText = text.Replace(findText,replaceText);
+            Console.WriteLine("\n"+newText);
         }
     }
 }
