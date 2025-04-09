@@ -17,8 +17,6 @@
             File.WriteAllText(path, text);
 
             FileInfo fileInfo = new FileInfo(path);
-            Console.WriteLine("Введите слово для поиска в тексте:");
-            string word = Console.ReadLine();
 
             if (!File.Exists(path))
             {
@@ -26,8 +24,11 @@
             }
             else
             {
+                Console.WriteLine("Введите слово для поиска в тексте:");
+                string word = Console.ReadLine();
                 Console.WriteLine($"Строки с заданым словом {word}:\n\n{FindCurWord(path, word)}");
             }
+
         }
         
         
