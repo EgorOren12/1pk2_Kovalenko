@@ -28,7 +28,7 @@ namespace Task_32_01
                 if (!kolobok.IsAlive || kolobok.Speed == 0)
                     break;
                 kolobok.Roll();
-                if (random.Next(0,2) == 1)
+                if (random.Next(0,2) == 1) //рандом препятствия для колобка
                 {
                     kolobok.MeetObstacle(obstacles[random.Next(0,3)]);
                     if (kolobok.Speed == 0)
