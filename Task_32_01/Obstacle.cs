@@ -13,6 +13,6 @@ namespace Task_32_01
         {
             Name = name;
         }
-        public abstract bool CanKill(Kolobok kolobok);
+        public abstract bool CanStop(Kolobok kolobok);
     }
 }

@@ -9,8 +9,9 @@ namespace Task_32_01
     public class Kolobok
     {
         public int Position {  get; private set; }
-        public int Speed { get; }
+        public int Speed { get; private set; }
         public bool IsAlive { get; private set; }
+        public bool IsStop { get; private set; }
         public Kolobok() 
         {
         Position = 0;
@@ -38,10 +39,14 @@ namespace Task_32_01
         }
         public void MeetObstacle(Obstacle obstacle)
         {
-            if (obstacle.CanKill(this))
+            if (obstacle.CanStop(this)) 
             {
-                IsAlive = false;
-                Console.WriteLine("");
+                Speed = 0;
+                Console.WriteLine($"Колобок остановился из-за {obstacle.Name}");
+            }
+            else
+            {
+                Console.WriteLine($"Колобок перешел через {obstacle.Name}");
             }
         }
     }
