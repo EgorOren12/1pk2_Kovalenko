@@ -13,7 +13,7 @@ namespace Task_38_04
         public string Surname { get; private set; }
         public string Patronymic { get; private set; }
         public DateTime Birthday { get; private set; }
-        public string Grooup { get; private set; }
+        public string Group { get; private set; }
         public StudentFlour Flour { get; private set; }
         
         public Student(string name, string surname,string patronymic,string group, DateTime birthday, StudentFlour flour)
@@ -21,7 +21,7 @@ namespace Task_38_04
             Name = name;
             Surname = surname;
             Patronymic = patronymic;
-            Grooup = group;
+            Group = group;
             Birthday = birthday;
             Flour = flour;
         }

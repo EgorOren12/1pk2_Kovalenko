@@ -31,7 +31,8 @@ namespace Task_38_04
                 MessageBox.Show(errorMessage);
                 return;
             }
-                Student student = new Student(nameTextBox.Text,
+                Student student = new Student(
+                    nameTextBox.Text,
                 surnameTextBox.Text, 
                 patronomicsTextBox.Text,
                 groupTextBox.Text,
@@ -116,7 +117,7 @@ namespace Task_38_04
             var item = StudentsListListBox.SelectedItem;
             if (item != null && item is Student student)
             {
-                MessageBox.Show($"{student.Surname} {student.Name} {student.Patronymic}\nГруппа - {student.Grooup} \nПол - {student.FlourOfStudent()}\nДата рождения - {student.Birthday:d}");
+                MessageBox.Show($"{student.Surname} {student.Name} {student.Patronymic}\nГруппа - {student.Group} \nПол - {student.FlourOfStudent()}\nДата рождения - {student.Birthday:d}");
             }
         }
         private void StudentsListMouseDoubleClick(object sender, RoutedEventArgs e)
