@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icons\ListIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\ImportIcon.png" />
+    <None Remove="Icons\PlusIcon.png" />
+    <None Remove="Icons\SaveIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\ListIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\ImportIcon.png" />
+    <Resource Include="Icons\PlusIcon.png" />
+    <Resource Include="Icons\SaveIcon.png" />
+  </ItemGroup>
+
+</Project>
