@@ -52,7 +52,8 @@
                 Grid.Column="0"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
-                Margin="5"/>
+                Margin="5"
+                MaxWidth="300"/>
         <ListBox x:Name="productsListBox"
                  Grid.Row="4" 
                  Grid.Column="0"
