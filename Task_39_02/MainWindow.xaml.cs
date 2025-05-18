@@ -98,6 +98,7 @@ namespace Task_39_02
                         else
                         {
                             MessageBox.Show("Некорректный формат строки", "Ошибка формата", MessageBoxButton.OK, MessageBoxImage.Error);
+                            return;
                         }
                     }
                 }
